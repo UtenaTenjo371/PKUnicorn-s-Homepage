@@ -14,8 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include('myHomepage.urls')),#起始页主页
+    path('game/',include('game.urls'))#游戏界面
+    #用户登录、登出、注册界面
+    #url(r'^login/', views.login),
+    #url(r'^register/', views.register),
+    #url(r'^logout/', views.logout),
+
 ]
