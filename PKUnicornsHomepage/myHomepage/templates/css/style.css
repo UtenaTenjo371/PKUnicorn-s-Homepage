@@ -1,0 +1,87 @@
+html {
+    width:max-content;
+    height:1080px;
+    overflow: auto;
+    font-style: sans-serif;
+  }
+
+
+  body{
+    background:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1608%2F15%2Fc9%2F25597602_1471253555163.jpg&refer=http%3A%2F%2Fimg.pconline.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611224084&t=7757a8bd305660b434fac01ea2c5ba67)  no-repeat center center;
+    background-size:cover;
+    background-attachment:fixed;
+    background-color:#CCCCCC;
+ }
+.header .logo{
+    font-size: 100px;
+    background-color:black;
+    color: #fff; 
+    padding:10px;
+    overflow: auto;
+}
+.header .nav{
+    background-color: blue;
+    overflow: auto;
+}
+
+.nav a.index{ 
+    background-color: orange;
+}
+.header .nav a{
+    background-color: rgb(248, 249, 250);
+    color:#fff;
+    font-size:17px;
+    padding: 10px;
+    float: left;
+    text-decoration: none; 
+}
+
+/* //鼠标放上去 */
+#login  input:hover{
+    background-color: rgb(248, 249, 250);
+}
+
+  #login {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    margin: -150px 0 0 -150px;
+    width: max-content;
+    height: max-content;
+  }
+
+  #login h1 {
+    color: #fff;
+    text-shadow: 0 0 10px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin:0;
+  }
+
+  input {
+    width: 278px;
+    height: 18px;
+    margin-bottom: auto;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 1px 1px 1px;
+    border-top: 1px solid #312E3D;
+    border-left: 1px solid #312E3D;
+    border-right: 1px solid #312E3D;
+    border-bottom: 1px solid #56536A;
+    border-radius: 4px;
+    background-color: #2D2D3F;
+  }
+
+
+img {
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+}

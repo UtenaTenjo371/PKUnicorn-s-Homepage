@@ -4,164 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <title>第六组浏览器主页</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-
-  <style type="text/css">
-    html {
-      width:max-content;
-      height:max-content;
-      overflow: auto;
-      font-style: sans-serif;
-    }
-
-    body {
-      width:max-content;
-      height:max-content;
-      font-family: 'Open Sans', sans-serif;
-      margin:auto;
-      background-color: #27eef5;
-    }
-
-    #login {
-      position: absolute;
-      top: 40%;
-      left: 35%;
-      margin: -150px 0 0 -150px;
-      width: max-content;
-      height: max-content;
-    }
-
-    #login h1 {
-      color: #fff;
-      text-shadow: 0 0 10px;
-      letter-spacing: 1px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2em;
-      margin: 0.67em 0;
-    }
-
-    input {
-      width: 278px;
-      height: 18px;
-      margin-bottom: 10px;
-      outline: none;
-      padding: 10px;
-      font-size: 13px;
-      color: #fff;
-      text-shadow: 1px 1px 1px;
-      border-top: 1px solid #312E3D;
-      border-left: 1px solid #312E3D;
-      border-right: 1px solid #312E3D;
-      border-bottom: 1px solid #56536A;
-      border-radius: 4px;
-      background-color: #2D2D3F;
-    }
-
-    .but {
-      width:auto;
-      min-height:auto;
-      display: block;
-      background-color: #4a77d4;
-      border: 1px solid #3762bc;
-      color: #fff;
-      padding: 9px 14px;
-      font-size: 15px;
-      line-height: normal;
-      border-radius: 5px;
-      margin: 0;
-    }
-
-  img {
-      border-radius: 4px;
-      max-width: 100%;
-      height: auto;
-  }
-
-  #web_bg{
-    position:fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    height:100%;
-    min-width: 1000px;
-    z-index:-10;
-    zoom: 1;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-position: center 0;
-  }
-
-  /* div{
-      width:max-content;
-      height:max-content;
-      margin: 0xp;
-      background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607232582402&di=dc6a8b10da7e6b862f392689f3c2a9e5&imgtype=0&src=http%3A%2F%2Fattachments.gfan.com%2Fforum%2F201503%2F19%2F211608ztcq7higicydxhsy.jpg")
-      background-repeat: no-repeat;
-	    background-attachment: fixed;
-	    background-size: 100% 100%;
-  } */
-
-  /* div{
-      width:1000px;
-      height:1000px;
-      overflow:scroll;
-  } */
-    
-
-    /* from{
-      width:500px;
-      height:50px;
-      padding:10px 20px 30px;
-      text-align:center;
-      line-height:50px;
-      border:1px solid #777777
-    } */
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 
-
 <body>
-  <div id="Layer1" style="position:absolute; width:110%; height:110%; z-index:-1">    
-    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607232582402&di=dc6a8b10da7e6b862f392689f3c2a9e5&imgtype=0&src=http%3A%2F%2Fattachments.gfan.com%2Fforum%2F201503%2F19%2F211608ztcq7higicydxhsy.jpg" height="100%" width="100%"/>    
-    </div>  
-  <div id="login">
-    <h1>大噶好，这是第六组的浏览器主页</h1>
-    <!-- <p>太菜了啥都写不出来</p> -->
-    <!-- <a href="http://www.baidu.com">百度搜索</a>
-    <a href="http://www.bing.com">必应搜索</a>
-    <a href="http://www.google.com">404搜索</a> -->
-    <p>\n
+  <!-- <div id="Layer1" style="position:absolute; width:110%; height:110%; z-index:-1">   
+        <img src="img/back.jfif" height="100%" width="100%"/>     -->
+  <!-- </div>   -->
+      <div id="login">
+        <!-- 页面导航 -->
+        <!-- <div class="nav">
+          <a href="http://baidu.com" target="_blank">新闻</a> 
+          <a href="https://image.baidu.com/">图片</a>
+          <a href="https://finance.sina.com.cn/stock/">股票</a>
+          <a href="https://zhidao.baidu.com/">问答</a>
+          <a href="https://www.taobao.com/">购物</a>
+      </div>  -->
+        <h1><a class="index" href="index.html"><img src="img/logo.png"></a></h1>
+        <div class="search">
+        <form action="http://www.baidu.com/s" method="GET" target="_blank">
+            <img src="img/百度.png" width= "60px" height="60px" alt="百度Logo" />
+            <input type="text" name="wd" size="38" />
+            <input type="submit" value="百度一下" style="width: 288px;height:40px"/>
+            <input type="hidden" name="ie" value="utf-8" />
+            <input type="hidden" name="tn" value="ace" />
+        </form>
 
-    <form action="http://www.baidu.com/s" method="GET" target="_blank">
-      <img src="https://store-images.s-microsoft.com/image/apps.17744.9007199266244390.c9b7160b-2bdc-4d34-b32a-a09478d87c81.5f4be398-4898-403d-b46d-76e66f26fdbc?w=180&h=180&q=60"style="width: 60px;height:60px" alt="百度Logo" />
-      <input type="text" name="wd" size="38" />
-      <input type="submit" value="百度一下" style="width: 288px;height:40px"/>
-      <input type="hidden" name="ie" value="utf-8" />
-      <input type="hidden" name="tn" value="ace" />
-  </form>
-  <form action="http://www.bing.com/" method="GET" target="_blank">
-    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/c6/a1/b4/c6a1b434-bdbc-b481-31f7-bddf650ad649/source/60x60bb.jpg"style="width: 60px;height:60px" alt="必应Logo" />
-    <input type="text" name="wd" size="38" />
-    <input type="submit" value="必应" style="width: 288px;height:40px"/>
-    <input type="hidden" name="ie" value="utf-8" />
-    <input type="hidden" name="tn" value="ace" />
-</form>
-<form action="http://www.google.com/s" method="GET" target="_blank">
-  <img src="https://src.pcsoft.com.cn/img5/20170829/237d5102-978b-4cef-9e0d-4f2435c60f32titlepic.jpg"style="width: 60px;height:60px" alt="必应Logo" />
-  <input type="text" name="wd" size="38" />
-  <input type="submit" value="Google" style="width: 288px;height:40px"/>
-  <input type="hidden" name="ie" value="utf-8" />
-  <input type="hidden" name="tn" value="ace" />
-</form>
-
-  </div>
+        <form action="http://www.bing.com/" method="GET" target="_blank">
+          <img src="img/必应.jpg" width= "60px" height="60px" alt="必应Logo" />
+          <input type="text" name="wd" size="38" />
+          <input type="submit" value="必应" style="width: 288px;height:40px"/>
+          <input type="hidden" name="ie" value="utf-8" />
+          <input type="hidden" name="tn" value="ace" />
+      </form>
+      <form action="http://www.google.com/s" method="GET" target="_blank">
+        <img src="img/谷歌.jpg" width= "60px" height="60px" alt="必应Logo" />
+        <input type="text" name="wd" size="38" />
+        <input type="submit" value="Google" style="width: 288px;height:40px"/>
+        <input type="hidden" name="ie" value="utf-8" />
+        <input type="hidden" name="tn" value="ace" />
+      </div>
+      <div class="alterBG">
+        <input type="botton" name="自定义" style="">
+      </div>
+    </div>
 </body>
-
 </html>
