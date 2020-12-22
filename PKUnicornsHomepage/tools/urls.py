@@ -1,12 +1,8 @@
 from django.urls import path
-from . import views
 
-app_name = 'tools'
+from tools.views import editor, delete_document
 
-urlpatterns =[
-    path('tools',views.tools,name='tools'),
-    
-    # 例如: /game/5/
-    #('<int:question_id>/', views.detail,name='detail'),
-
+urlpatterns = [
+    path('tools', editor, name='editor'),
+    path('tools/delete_document/<int:docid>/', delete_document, name='delete_document'),
 ]
