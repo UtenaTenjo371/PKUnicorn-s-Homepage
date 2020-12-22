@@ -54,9 +54,46 @@
 
           <div class="inner cover">
             <img src="/static/img/icon.png" class="img-responsive img-rounded homepage-icon" alt="PKUnicorn">
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">搜索</a>
-            </p>
+            <form class="form-horizontal" role="form" action="http://www.baidu.com/s" method="GET" target="_blank">
+              <div class="form-group">
+                <div class="col-sm-10">
+                  <input class="form-control" type="text" name="wd" />
+                </div>
+                <div class="col-sm-2">
+                  <input class="form-control btn btn-lg btn-default" type="submit" value="搜索"/>
+                </div>
+                <!--<div class="btn-group" data-toggle="buttons">radio美化方案 </div>-->
+                <input type="hidden" name="ie" value="utf-8" />
+                <input type="hidden" name="tn" value="ace" />
+              </div>
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="searchEngine" id="option_baidu" value="baidu" checked>百度
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="searchEngine" id="option_bing"  value="bing">必应
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="searchEngine" id="option_google"  value="google">谷歌
+                </label>
+              </div>
+            </form>
+            <!--
+            <form action="http://www.bing.com/" method="GET" target="_blank">
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/c6/a1/b4/c6a1b434-bdbc-b481-31f7-bddf650ad649/source/60x60bb.jpg"style="width: 60px;height:60px" alt="必应Logo" />
+              <img src="https://store-images.s-microsoft.com/image/apps.17744.9007199266244390.c9b7160b-2bdc-4d34-b32a-a09478d87c81.5f4be398-4898-403d-b46d-76e66f26fdbc?w=180&h=180&q=60"style="width: 60px;height:60px" alt="百度Logo" />
+              <input type="text" name="wd" size="38" />
+              <input type="submit" value="必应" style="width: 288px;height:40px"/>
+              <input type="hidden" name="ie" value="utf-8" />
+              <input type="hidden" name="tn" value="ace" />
+            </form>
+            <form action="http://www.google.com/s" method="GET" target="_blank">
+              <img src="https://src.pcsoft.com.cn/img5/20170829/237d5102-978b-4cef-9e0d-4f2435c60f32titlepic.jpg"style="width: 60px;height:60px" alt="必应Logo" />
+              <input type="text" name="wd" size="38" />
+              <input type="submit" value="Google" style="width: 288px;height:40px"/>
+              <input type="hidden" name="ie" value="utf-8" />
+              <input type="hidden" name="tn" value="ace" />
+            </form>-->
           </div>
 
           <div class="mastfoot">
