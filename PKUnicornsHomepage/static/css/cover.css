@@ -126,9 +126,9 @@ body {
 *Tools
 */
 .tools-background{
-  margin:5px;
   z-index: 1;
-  padding:5% 2%;
+  padding:5% 1%;
+  margin:1%;
 }
 .tools-background::after{
   content: '';
@@ -146,6 +146,31 @@ body {
   text-shadow:none;
 }
 .noteButton:hover{
+  color:#999;
+}
+.url-button{
+  z-index: 1;
+  padding:1% 1%;
+  margin:1%; 
+  background-color: rgba(255,255,255,0.8);
+}
+.url-img{
+  width:2rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 20%;
+}
+.url-add{
+  font-size: 3rem;
+  width:5rem;
+  margin:1%; 
+  padding:1% 1%;
+  background-color: rgba(255,255,255,0.8);
+}
+.homepage-bookmark{
+  margin:2%;
+}
+.url-button>a:hover{
   color:#999;
 }
 

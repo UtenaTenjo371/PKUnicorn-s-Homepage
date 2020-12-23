@@ -1,0 +1,38 @@
+{%extends 'game/base.html'%}
+{% block name %}俄罗斯方块{% endblock name %}
+{% block name1 %}俄罗斯方块{% endblock name1 %}
+
+{% block css %}<link rel="stylesheet" href="/static/elsfk/css/style.css">{% endblock css %}
+
+{% block content %}
+    <center>
+		<div class="game"  id="game"></div>
+		<div class="gameOver" id="gameOver">
+			<p>游戏结束啦</p>
+		</div>
+		<div class="info">
+			<div class="next"  id="next"></div>
+			<div class="time">
+				<p>已用时： <span id="time">0</span>s</p>
+				<p>已得分： <span id="recode">0</span>分</p>
+			</div>
+		</div>
+		<div class="tips">
+			<p>游戏注释：</p>
+			<p>用键盘控制方块的下落和变形</p>
+			<p>↑：变形</p>
+			<p>←：左移</p>
+			<p>↓：下移（有自定义的下落速度）</p>
+			<p>→：右移</p>
+			<p>空格：速降（会直接到达最下层）</p>
+		</div>
+
+		<script src="/static/elsfk/js/square.js"></script>
+		<script src="/static/elsfk/js/squareFactory.js"></script>
+		<script src="/static/elsfk/js/game.js"></script>
+		<script src="/static/elsfk/js/local.js"></script>
+		<script src="/static/elsfk/js/script.js"></script>
+    </center>
+{% endblock %}
+
+

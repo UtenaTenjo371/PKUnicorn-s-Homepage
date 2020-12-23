@@ -39,3 +39,13 @@ function google() {
   document.getElementById("option_google").value = document.getElementById("search_text").value;
 
 }
+/**
+ * 给书签添加icon
+ */
+var urls = document.getElementsByClassName("url-host")
+for (var i=0;i<urls.length;i++){
+    var url = urls[i].host
+    var imgUrl = "http://"+url+"/favicon.ico"
+    var img = urls[i].getElementsByTagName("img")
+    img[0].setAttribute("src",imgUrl)
+}
