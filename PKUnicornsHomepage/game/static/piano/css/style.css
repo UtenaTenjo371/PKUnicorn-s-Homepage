@@ -1,0 +1,13 @@
+body
+{
+  background:#112;
+  color:#fff;
+  user-select:none;
+  text-align:center;
+  style=font-size:30px;
+  font-family:arial;
+}
+input
+{
+  width:40;
+}

@@ -1,0 +1,14 @@
+{%extends 'game/base.html'%}
+{% block name %}模拟钢琴{% endblock name %}
+{% block name1 %}模拟钢琴{% endblock name1 %}
+
+{% block css %}<link rel="stylesheet" href="/static/piano/css/style.css">{% endblock css %}
+
+{% block content %}
+    <center>
+    <span id="K"></span>
+    八度音 <input type=number id=O value=0 min=-3 max=3 onkeydown='return false'>&nbsp;
+    Key <input type=number id=Y value=0 min=-12 max=12 onkeydown='return false'>
+    <script src="/static/piano/js/script.js"></script>
+    </center>
+{% endblock %}

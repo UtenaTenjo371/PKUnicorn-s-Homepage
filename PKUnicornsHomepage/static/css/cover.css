@@ -118,11 +118,61 @@ body {
   font-weight: bold;
 }
 .homepage-icon{
-  width: 150px;
+  width: 100px;
   margin:0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
-
+/*
+*Tools
+*/
+.tools-background{
+  z-index: 1;
+  padding:5% 1%;
+  margin:1%;
+}
+.tools-background::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.3);
+  z-index: -1;
+  border-radius: 2%;
+}
+.font-black{
+  color:#555;
+  text-shadow:none;
+}
+.noteButton:hover{
+  color:#999;
+}
+.url-button{
+  z-index: 1;
+  padding:1% 1%;
+  margin:1%; 
+  background-color: rgba(255,255,255,0.8);
+}
+.url-img{
+  width:2rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 20%;
+}
+.url-add{
+  font-size: 3rem;
+  width:5rem;
+  margin:1%; 
+  padding:1% 1%;
+  background-color: rgba(255,255,255,0.8);
+}
+.homepage-bookmark{
+  margin:2%;
+}
+.url-button>a:hover{
+  color:#999;
+}
 
 /*
  * Footer
