@@ -1,0 +1,20 @@
+
+{%extends 'game/base.html'%}
+{% block name %}拉桥{% endblock name %}
+{% block name1 %}拉桥{% endblock name1 %}
+
+{% block css %}<link rel="stylesheet" href="/static/laqiao/css/style.css">{% endblock css %}
+
+{% block content %}
+    <center>
+    <div class="container">
+        <div id="score"></div>
+        <canvas id="game" width="375" height="375"></canvas>
+        <div id="introduction">按住鼠标伸出一根棍子</div>
+        <div id="perfect">双倍积分</div>
+        <button id="restart">重新开始</button>
+    </div>
+    <script  src="/static/laqiao/js/script.js"></script>
+    </center>
+{% endblock %}
+
