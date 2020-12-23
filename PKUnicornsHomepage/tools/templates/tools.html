@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/static/css/cover.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">-->
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -62,81 +62,76 @@
               <img id="imgPre" src="" class="bg-img">
               <input style="display: none;" type="file" name="imgOne" id="imgOne" onchange="preImg(this.id,'imgPre');">
             </div>
+            
+            <!--Note便签-->
+            <div class="col-lg-6 myNotes">
+              <nav class="navbar navbar-default" role="navigation">
+                <div class="nav navbar-nav navbar-brand navbar-left">
+                    <p class="font-black">便签</p>
+                </div>
+    
+                <div class="nav navbar-nav navbar-brand navbar-right">
+                    <a href="{% url 'editor' %}?docid=0" class="navbar-item font-black noteButton">新建便签</a>
+                </div>
+              </nav>
+    
+              <section class="section">
+                  <div class="columns">
+                      <div class="col-lg-4 col-md-4">
+                          <aside class="menu">
+                              <p class="menu-label font-black">所有便签</p>
+      
+                              <ul class="list-group">
+                                  {% for doc in documents %}
+                                      <li class="list-group-item">
+                                          <a class="font-black" href="{% url 'editor' %}?docid={{ doc.id }}">{{ doc.title }}</a>
+                                      </li>
+                                  {% endfor %}
+                              </ul>
+                          </aside>
+                      </div>
+      
+                      <div class="col-lg-8">
+                          <form class="form" method="post" action="{% url 'editor' %}">
+                              {% csrf_token %}
+      
+                              <input type="hidden" name="docid" value="{{ docid }}">
+      
+                              <div class="form-group">
+                                  <label class="label font-black">
+                                      标题
+                                      {% if document %}
+                                          <span class="has-text-grey-light">
+                                              Created at: {{ document.created_at|date:"m/d Y" }} / 
+                                              <p>{{ article.content|linebreaksbr }}</p>
+                                              Modified at: {{ document.modified_at|date:"m/d Y" }}
+                                          </span>
+                                      {% endif %}
+                                  </label>
+                                  <input class="form-control" type="text" class="input" name="title" placeholder=""{% if document %} value="{{ document.title }}"{% endif %}>
+                              </div>
+      
+                              <div class="form-group">
+                                  <label class="label font-black">内容</label>
+                                  <textarea class="form-control textarea" name="content" placeholder="">{% if document %}{{ document.content }}{% endif %}</textarea>
+                              </div>
+      
+                              <div class="form-group">
+                                  <button class="btn btn-default col-lg-6">保存</button>
+                                  {% if document %}
+                                    <div class=" btn btn-danger col-lg-6">
+                                        <a href="{% url 'delete_document' document.id %}">删除</a>
+                                    </div>
+                                  {% endif %}
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </section>
+            </div>
+            <!--番茄钟-->
           </div>
-          <!--Note便签-->>
-          <nav class="navbar is-black">
-            <div class="navbar-brand">
-                <a href="{% url 'editor' %}" class="navbar-item">Notes</a>
-            </div>
-
-            <div class="navbar-menu">
-                <div class="navbar-end">
-                    <a href="{% url 'editor' %}?docid=0" class="navbar-item">Create a New Note</a>
-                </div>
-            </div>
-        </nav>
-
-        <section class="section">
-            <div class="columns">
-                <div class="column is-2">
-                    <aside class="menu">
-                        <p class="menu-label">All notes</p>
-
-                        <ul class="menu-list">
-                            {% for doc in documents %}
-                                <li>
-                                    <a href="{% url 'editor' %}?docid={{ doc.id }}">{{ doc.title }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </aside>
-                </div>
-
-                <div class="column is-10">
-                    <form method="post" action="{% url 'editor' %}">
-                        {% csrf_token %}
-
-                        <input type="hidden" name="docid" value="{{ docid }}">
-
-                        <div class="field">
-                            <label class="label">
-                                Title
-                                {% if document %}
-                                    <span class="has-text-grey-light">
-                                        Created at: {{ document.created_at|date:"m/d Y" }} / 
-                                        Modified at: {{ document.modified_at|date:"m/d Y" }}
-                                    </span>
-                                {% endif %}
-                            </label>
-
-                            <div class="control">
-                                <input type="text" class="input" name="title" placeholder="Title"{% if document %} value="{{ document.title }}"{% endif %}>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">Content</label>
-
-                            <div class="control">
-                                <textarea class="textarea" name="content" placeholder="Content">{% if document %}{{ document.content }}{% endif %}</textarea>
-                            </div>
-                        </div>
-
-                        <div class="field is-grouped">
-                            <div class="control">
-                                <button class="button is-primary">Save</button>
-                            </div>
-                            {% if document %}
-                                <div class="control">
-                                    <a href="{% url 'delete_document' document.id %}" class="button is-danger">Delete</a>
-                                </div>
-                            {% endif %}
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!--To do list-->
+          
           <div class="mastfoot">
             <div class="inner">
               <p><a href="https://github.com/UtenaTenjo371/PKUnicorn-s-Homepage">PKUnicorns</a> 2020.</p>

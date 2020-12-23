@@ -20,3 +20,15 @@
     var url = getFileUrl(sourceId);
     document.body.style.backgroundImage="url("+url+")";
   };
+
+function baidu() {
+  document.forms[0].action = "http://www.baidu.com/s";
+}
+
+function bing() {
+  document.forms[0].action = "http://cn.bing.com/search";
+}
+
+function google() {
+  document.forms[0].action = "http://www.google.com/search";
+}
