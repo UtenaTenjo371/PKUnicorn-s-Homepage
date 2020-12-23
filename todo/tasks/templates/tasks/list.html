@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+
+	body{
+		background-color: #eeffda;
+	}
+
+	input{
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	}
+
+	input::placeholder {
+	  color: #595757;
+	}
+
+	.submit{
+		background-color: #040506;
+	}
+
+	.center-column{
+		width:600px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: rgb(252, 252, 252);
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	}
+
+	.item-row{
+		background-color: #6c35a4e3;
+		margin: 10px;
+		padding: 20px;
+		border-radius: 3px;
+		color: rgb(255, 255, 255);
+		font-size: 16px;
+		box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+	}
+
+	.btn-danger{
+		background-color: #ed8a33;
+		border-color: #ed8a33;
+	}
+
+</style>
+
+<div class="center-column">
+
+	<form method="POST" action="/">
+		<h2>WHAT DO YOU WANT TO DO TODAY?</h2>
+		{% csrf_token %}
+		{{form.title}}
+		<input class="btn btn-info" type="submit" name="Create Task" value = 'Confirm'>
+	</form>
+
+	<div class="todo-list">
+
+	{% for task in tasks %}
+		<div class="item-row">
+			<a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
+			<a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
+
+			{% if task.complete == True %}
+			<strike>{{task}}</strike>
+			{% else %}
+			<span>{{task}}</span>
+			{% endif %}
+		</div>
+	{% endfor %}
+	</div>
+
+	<footer>
+		<div class="row pad">
+			<div class="col-lg-12 text-center">
+				Copyright &copy; 2020 <strong>PKUnicorn</strong>
+			</div>
+		</div>
+	</footer>
+
+</div>
