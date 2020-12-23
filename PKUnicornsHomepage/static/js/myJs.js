@@ -20,7 +20,9 @@
     var url = getFileUrl(sourceId);
     document.body.style.backgroundImage="url("+url+")";
   };
-
+/**
+ * 不同引擎搜索
+ */
 function baidu() {
   document.forms[0].action = "http://www.baidu.com/s";
 }
