@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="untitled.css">
+</head>
+<script type="text/javascript"> 
+        var result="";
+          function jisuan(num){
+       if(num=="="){
+   document.form1.text.value=eval(result);
+   }else{
+   result=result+num;
+   document.form1.text.value=result;
+   }
+   }
+</script>
+<body>
+
+
+<div class="box">
+<form action="" class="form1" name="form1">
+      <div class="header"> 
+         <input type="text" id="text" name="text" class="text"/>
+        
+          </div>
+          <div class="nav">
+     <table class="table">
+         <tr>
+         <td>  <input id="1" style="height:55px; width:55px;" type="button" value="1" onClick="jisuan(this.id)"/> </td>
+         <td>  <input id="2" style="height:55px; width:55px;" type="button" value="2" onClick="jisuan(this.id)"/> </td>
+         <td>  <input id="3" style="height:55px; width:55px;" type="button" value="3" onClick="jisuan(this.id)"/> </td>
+         <td>  <input id="+" style="height:55px; width:55px;" type="button" value="+" onClick="jisuan(this.id)"/> </td>
+         </tr>
+         <tr>
+         <td>  <input id="4" style="height:55px; width:55px;" type="button" value="4" onClick="jisuan(this.id)"/> </td>
+         <td>  <input id="5" style="height:55px; width:55px;" type="button" value="5" onClick="jisuan(this.id)"/> </td>
+         <td>  <input id="6" style="height:55px; width:55px;" type="button" value="6" onClick="jisuan(this.id)"/> </td>
+          <td>  <input id="-" style="height:55px; width:55px;" type="button" value="-" onClick="jisuan(this.id)"/> </td>
+         </tr>
+         <tr>
+         <td>  <input id="7" style="height:55px; width:55px;" type="button" value="7" onClick="jisuan(this.id)"/> </td>
+         <td>  <input id="8" style="height:55px; width:55px;" type="button" value="8" onClick="jisuan(this.id)"/> </td>
+         <td>  <input id="9" style="height:55px; width:55px;" type="button" value="9" onClick="jisuan(this.id)"/> </td>
+          <td>  <input id="*" style="height:55px; width:55px;" type="button" value="*" onClick="jisuan(this.id)"/> </td>
+         </tr>
+          <tr>
+         <td>  <input id="/" style="height:55px; width:55px;" type="button" value="/" onClick="jisuan(this.id)"/> </td>
+         <td>  <input id="0" style="height:55px; width:55px;" type="button" value="0" onClick="jisuan(this.id)"/> </td>
+          <td>  <input id="." style="height:55px; width:55px;" type="button" value="." onClick="jisuan(this.id)"/></td>
+          <td>  <input id="=" style="height:55px; width:55px;" type="button" value="=" onClick="jisuan(this.id)"/> </td>
+         </tr>
+         </table>
+        
+         
+     </div>
+   </form>
+ </div>
