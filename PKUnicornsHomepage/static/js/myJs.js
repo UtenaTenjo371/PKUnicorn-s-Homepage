@@ -25,12 +25,17 @@
  */
 function baidu() {
   document.forms[0].action = "http://www.baidu.com/s";
+  document.getElementById("option_baidu").value = document.getElementById("search_text").value;
 }
 
 function bing() {
   document.forms[0].action = "http://cn.bing.com/search";
+  document.getElementById("option_bing").value = document.getElementById("search_text").value;
+
 }
 
 function google() {
   document.forms[0].action = "http://www.google.com/search";
+  document.getElementById("option_google").value = document.getElementById("search_text").value;
+
 }

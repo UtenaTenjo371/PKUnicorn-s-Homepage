@@ -62,17 +62,17 @@
           </div>
 
           <div class="inner cover">
-            <!--icon（更换背景）及标题-->
+            <!--icon（更换背景）及标题
             <div class="change-BG">
               <label class="fileLabel" for="imgOne">
                 <img src="/static/img/icon.png" class="img-responsive img-rounded homepage-icon" alt="PKUnicorn">
               </label>
               <img id="imgPre" src="" class="bg-img">
               <input style="display: none;" type="file" name="imgOne" id="imgOne" onchange="preImg(this.id,'imgPre');">
-            </div>
+            </div>-->
             
             <!--Note便签-->
-            <div class="col-lg-6 myNotes">
+            <div class="col-lg-5 tools-background">
               <nav class="navbar navbar-default" role="navigation">
                 <div class="nav navbar-nav navbar-brand navbar-left">
                     <p class="font-black">便签</p>
@@ -85,7 +85,7 @@
     
               <section class="section">
                   <div class="columns">
-                      <div class="col-lg-4 col-md-4">
+                      <div class="col-lg-6">
                           <aside class="menu">
                               <p class="menu-label font-black">所有便签</p>
       
@@ -99,7 +99,7 @@
                           </aside>
                       </div>
       
-                      <div class="col-lg-8">
+                      <div class="col-lg-6">
                           <form class="form" method="post" action="{% url 'editor' %}">
                               {% csrf_token %}
       
@@ -138,7 +138,7 @@
               </section>
             </div>
             <!--番茄钟-->
-            <div class="col-lg-6">
+            <div class="col-lg-6 tools-background">
               <h1>PomodoroClock</h1>
               <div class="main">
                   <div class="control">
